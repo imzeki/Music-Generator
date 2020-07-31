@@ -8,4 +8,4 @@ to have python first)
 Or the simple way is to click on the file, run it on an app that supports python and click run.(Make sure the pyknon and IPython 
 are downloaded!)
 
-Version - 0.1
+Version - 0.0.2
