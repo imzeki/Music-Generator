@@ -180,7 +180,6 @@ while True:
             name = prevWord
             name += ".mid"
     path = input('Where is the path to store the music files(e.g \'C:\\\')? \n')
-    os.chdir(path)
     try:
         Notes = int(input("Notes(Affects duration of song, the more the longer, 100 is reccomended) \n"))
     except:
