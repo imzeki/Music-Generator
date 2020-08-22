@@ -3,3 +3,5 @@ Version 0.0.1 - First Release
 Version 0.0.2 - Several instruments now can play
 
 Version 0.1.0 - Music has been improved, now you can tell the script which path to send the .mid file
+
+Version 0.1.1 - Added new chord: Ab Major. Now from 200 instruments available to play, there are now 300 instruments currently avaialable. The max tempo is now 300.

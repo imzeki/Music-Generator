@@ -157,6 +157,12 @@ Beautiful2 = {
     'A',
     'B'
 }
+
+Ab_Major = {
+    'Ab',
+    'C',
+    'Eb'
+}
 #Add more chords if you want to
 
 while True:
@@ -189,7 +195,10 @@ while True:
         notes *= random.randint(1, 2)
         this_seq = ''
         for i in range(notes):
-            pitch = random.sample(pitches, 3)
+            try:
+                pitch = random.sample(pitches, 3)
+            except:
+                pitch = random.sample(pitches, 2)
             duration = random.sample(durations, 1)
             try:
                 this_seq += pitch[0] + duration[0] + ' ' + pitch[1] + duration[1] + pitch[2] + duration[2] + pitch[0] + duration[0] + ' ' + pitch[1] + duration[1] + pitch[2] + duration[2] + pitch[0] + duration[0] + ' ' + pitch[1] + duration[1] + pitch[2] + duration[2] + ' '
@@ -200,90 +209,97 @@ while True:
                     this_seq += pitch[0] + duration[0] + ' '
         return NoteSeq(this_seq)
 
-    if random.randint(1, 12) == 1:
+    if random.randint(1, 13) == 1:
         notes = get_random_note_seq(Notes, A_major, durations)
         print("A Major used")
-        midi = Midi(1, tempo=random.randint(100, 240), instrument=[random.randint(1,117), random.randint(1,117), random.randint(1,117), random.randint(1,117)])
+        midi = Midi(4, tempo=random.randint(50, 300), instrument=[random.randint(1,300), random.randint(1,300), random.randint(1,300), random.randint(1,300)])
         midi.seq_notes(notes, track=0)
         midi.write(name)
         print("Name is:", name)
-    elif random.randint(1, 12) == 2:
+    elif random.randint(1, 13) == 2:
         notes = get_random_note_seq(Notes, G_major, durations)
         print("G Major used")
-        midi = Midi(1, tempo=random.randint(100, 240), instrument=[random.randint(1,117), random.randint(1,117), random.randint(1,117), random.randint(1,117)])
+        midi = Midi(4, tempo=random.randint(50, 300), instrument=[random.randint(1,300), random.randint(1,300), random.randint(1,300), random.randint(1,300)])
         midi.seq_notes(notes, track=0)
         midi.write(name)
         print("Name is:", name)
-    elif random.randint(1, 12) == 3:
+    elif random.randint(1, 13) == 3:
         notes = get_random_note_seq(Notes, D_major, durations)
         print("D Major used")
-        midi = Midi(1, tempo=random.randint(100, 240), instrument=[random.randint(1,117), random.randint(1,117), random.randint(1,117), random.randint(1,117)])
+        midi = Midi(4, tempo=random.randint(50, 300), instrument=[random.randint(1,300), random.randint(1,300), random.randint(1,300), random.randint(1,300)])
         midi.seq_notes(notes, track=0)
         midi.write(name)
         print("Name is:", name)
-    elif random.randint(1, 12) == 4:
+    elif random.randint(1, 13) == 4:
         notes = get_random_note_seq(Notes, E_major, durations)
         print("E Major used")
-        midi = Midi(1, tempo=random.randint(100, 240), instrument=[random.randint(1,117), random.randint(1,117), random.randint(1,117), random.randint(1,117)])
+        midi = Midi(4, tempo=random.randint(50, 300), instrument=[random.randint(1,300), random.randint(1,300), random.randint(1,300), random.randint(1,300)])
         midi.seq_notes(notes, track=0)
         midi.write(name)
         print("Name is:", name)
-    elif random.randint(1, 12) == 5:
+    elif random.randint(1, 13) == 5:
         notes = get_random_note_seq(Notes, F_major, durations)
         print("F Major used")
-        midi = Midi(1, tempo=random.randint(100, 240), instrument=[random.randint(1,117), random.randint(1,117), random.randint(1,117), random.randint(1,117)])
+        midi = Midi(4, tempo=random.randint(50, 300), instrument=[random.randint(1,300), random.randint(1,300), random.randint(1,300), random.randint(1,300)])
         midi.seq_notes(notes, track=0)
         midi.write(name)
         print("Name is:", name)
-    elif random.randint(1, 12) == 6:
+    elif random.randint(1, 13) == 6:
         notes = get_random_note_seq(Notes, All, durations)
         print("All used")
-        midi = Midi(1, tempo=random.randint(100, 240), instrument=[random.randint(1,117), random.randint(1,117), random.randint(1,117), random.randint(1,117)])
+        midi = Midi(4, tempo=random.randint(50, 300), instrument=[random.randint(1,300), random.randint(1,300), random.randint(1,300), random.randint(1,300)])
         midi.seq_notes(notes, track=0)
         midi.write(name)
         print("Name is:", name)
-    elif random.randint(1, 12) == 7:
+    elif random.randint(1, 13) == 7:
         notes = get_random_note_seq(Notes, Db_major, durations)
         print("Db Major used")
-        midi = Midi(1, tempo=random.randint(100, 240), instrument=[random.randint(1,117), random.randint(1,117), random.randint(1,117), random.randint(1,117)])
+        midi = Midi(4, tempo=random.randint(50, 300), instrument=[random.randint(1,300), random.randint(1,300), random.randint(1,300), random.randint(1,300)])
         midi.seq_notes(notes, track=0)
         midi.write(name)
         print("Name is:", name)
-    elif random.randint(1, 12) == 8:
+    elif random.randint(1, 13) == 8:
         notes = get_random_note_seq(Notes, B_major, durations)
         print("B Major used")
-        midi = Midi(1, tempo=random.randint(100, 240), instrument=[random.randint(1,117), random.randint(1,117), random.randint(1,117), random.randint(1,117)])
+        midi = Midi(4, tempo=random.randint(50, 300), instrument=[random.randint(1,300), random.randint(1,300), random.randint(1,300), random.randint(1,300)])
         midi.seq_notes(notes, track=0)
         midi.write(name)
         print("Name is:", name)
-    elif random.randint(1, 12) == 9:
+    elif random.randint(1, 13) == 9:
         notes = get_random_note_seq(Notes, C_major, durations)
         print("C Major used")
-        midi = Midi(1, tempo=random.randint(100, 240), instrument=[random.randint(1,117), random.randint(1,117), random.randint(1,117), random.randint(1,117)])
+        midi = Midi(4, tempo=random.randint(50, 300), instrument=[random.randint(1,300), random.randint(1,300), random.randint(1,300), random.randint(1,300)])
         midi.seq_notes(notes, track=0)
         midi.write(name)
         print("Name is:", name)
-    elif random.randint(1, 12) == 10:
+    elif random.randint(1, 13) == 10:
         notes = get_random_note_seq(Notes, Sharps, durations)
         print("Sharps are used")
-        midi = Midi(1, tempo=random.randint(100, 240), instrument=[random.randint(1,117), random.randint(1,117), random.randint(1,117), random.randint(1,117)])
+        midi = Midi(4, tempo=random.randint(50, 300), instrument=[random.randint(1,300), random.randint(1,300), random.randint(1,300), random.randint(1,300)])
         midi.seq_notes(notes)
         midi.write(name)
         print("Name is:", name)
-    elif random.randint(1, 12) == 11:
+    elif random.randint(1, 13) == 11:
         notes = get_random_note_seq(Notes, Beautiful, durations)
         print("Beautiful 1 is used")
-        midi = Midi(1, tempo=random.randint(100, 240), instrument=[random.randint(1,117), random.randint(1,117), random.randint(1,117), random.randint(1,117)])
+        midi = Midi(4, tempo=random.randint(50, 300), instrument=[random.randint(1,300), random.randint(1,300), random.randint(1,300), random.randint(1,300)])
+        midi.seq_notes(notes)
+        midi.write(name)
+        print("Name is:", name)
+    elif random.randint(1, 13) == 12:
+        notes = get_random_note_seq(Notes, Beautiful2, durations)
+        print("Beautiful 2 is used")
+        midi = Midi(4, tempo=random.randint(50, 300), instrument=[random.randint(1,300), random.randint(1,300), random.randint(1,300), random.randint(1,300)])
         midi.seq_notes(notes)
         midi.write(name)
         print("Name is:", name)
     else:
-        notes = get_random_note_seq(Notes, Beautiful2, durations)
-        print("Beautiful 2 is used")
-        midi = Midi(1, tempo=random.randint(100, 240), instrument=[random.randint(1,117), random.randint(1,117), random.randint(1,117), random.randint(1,117)])
+        notes = get_random_note_seq(Notes, Ab_Major, durations)
+        print("Ab Major is used")
+        midi = Midi(4, tempo=random.randint(50, 300), instrument=[random.randint(1,300), random.randint(1,300), random.randint(1,300), random.randint(1,300)])
         midi.seq_notes(notes)
         midi.write(name)
-        print("Name is:", name)
+    os.startfile(name)
     ask = input("Would you like to exit?(Answer with yes or no, not case-sensative) \n")
     if ask.lower() == "yes":
         exit(0)
