@@ -1,6 +1,6 @@
 Note:
 
-When opening Music.cmd, type down "import music" to activate the music generation.
+When opening Music.cmd, type down "import music" to activate the music generation. (No longer required)
 
 Pyknon is needed for the generation including IPython. Please download those using pip(download it) install pyknon, IPython(You need
 to have python first)
