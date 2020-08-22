@@ -1,0 +1,5 @@
+Version 0.0.1 - First Release
+
+Version 0.0.2 - Several instruments now can play
+
+Version 0.1.0 - Music has been improved, now you can tell the script which path to send the .mid file
